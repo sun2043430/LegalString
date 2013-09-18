@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include <winnt.h>
 #include "Matrix.h"
+#include <conio.h>
 
 //#define PRINT
 
@@ -195,6 +196,15 @@ int validstring_2(int nNumCount, int nLength)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+    get_G(1000000000);
+
+    assert(M_Power_K(1,3) == 1);
+    assert(M_Power_K(2,3) == 8);
+    assert(M_Power_K(2,0) == 1);
+    assert(M_Power_K(2,10) == 1024);
+    assert(M_Power_K(10,4) == 10000);
+    assert(M_Power_K(0,0) == 0);
+    assert(M_Power_K(100,0) == 1);
 //    printf("%d\n", validstring_1(3, 3));
 //    printf("%d\n", validstring(3, 3));
 //    printf("%d\n", validstring(5, 5));
@@ -226,6 +236,7 @@ int _tmain(int argc, _TCHAR* argv[])
 //    printf("%d\n", validstring(10, 10));
 //    printf("%d\n", validstring(6, 6));
 //    printf("%d\n", validstring(66, 634));
+    _getch();
 
   	return 0;
 }
